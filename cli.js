@@ -1,10 +1,18 @@
 #!/usr/bin/env node
 
 const program = require("commander");
+
 const  mdLinks  = require("./index");
 
 const cli = (name, options, command) => {
-   mdLinks.mdLinks(name, true)
+     
+
+     if (options.validate){
+       mdLinks.mdLinks(name, {validate:true} )
+     }
+     else{mdLinks.mdLinks(name)}
+
+  
 
 };
 
@@ -18,16 +26,5 @@ program.parse(process.argv);
 
 
 
-// if (argv.length == 1) {
-//   funcionmd.mdLinks(path).then(array => {
-//       array.forEach(object => {
-//           console.table({
-//               File: object.file,
-//               href: object.href,
-//               text: object.text
-//           })
-//       })
-//   })
-// }
 
 
