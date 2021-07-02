@@ -7,7 +7,8 @@ const directory = require('./recursion.js');
 
 
 const mdLinks = (MD,  options = { validate: false }) => {
-  var userWrote=true
+  if (options.validate==true){userWrote=options.validate}
+  else(userWrote=options.validate)
     directory.main(MD).then(res=>res.forEach(element => {
       functions.readLinks(element,userWrote)
       .then(hola=>{console.log(hola)})
