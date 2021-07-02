@@ -24,7 +24,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "mdlinks": "./cli.js"
+    "mdlinks": "cli.js"
   },
   "bugs": {
     "url": "https://github.com/carfolacam98/BOG002-md-links/issues"
