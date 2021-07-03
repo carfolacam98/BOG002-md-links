@@ -1,20 +1,19 @@
-const realPath=require("path")
+
 const functions = require('./funciones.js');
-const realFs = require('fs');
+
 const directory = require('./recursion.js');
 //REPASO OPERADOR CONDICIONAL TERNIARIO
 
 
 
-const mdLinks = (MD,  options = { validate: false }) => {
+function mdLinks  (MD,  options = { validate: false }) {
+  return new Promise ((resolve,reject)=>{
   options.validate==true? userWrote=options.validate: (userWrote=options.validate)
     directory.main(MD).then(res=>res.forEach(element => {
-      functions.readLinks(element,userWrote)
-      .then(hola=>{console.log(hola)})
-      .catch(error=>{
-        console.log("Nel perro "+error)
-      });
-    }))};
+       if (element!=undefined){
+       resolve (functions.readLinks(element,userWrote))}
+       else{reject(console.log("Nel perro "))}       
+      }))})};
    
            
     

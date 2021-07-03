@@ -12,7 +12,8 @@ const arrayDetail=[]
 const arrayTrue=[]
 
 details.forEach(detail => arrayDetail.push(detail))
-//ponerlo mejor con un map
+
+
     for (var i in arrayDetail){
         let url=arrayDetail[i].href
         if (url.includes("https")||url.includes("http")){
@@ -58,8 +59,8 @@ function status(link){
             
           resolve(response.statusCode)
         } else{
-            console.log(error)
-          reject(error)
+           // console.log(error)
+          resolve(400)
         }
     })})};
 
