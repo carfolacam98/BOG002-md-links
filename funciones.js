@@ -3,7 +3,7 @@ const markdownLinkExtractor = require('markdown-link-extractor');
 const { readFileSync } = require('fs');
 
 async function readLinks(archivo,bool){
-  const markdown = readFileSync(archivo, {encoding: 'utf8'});
+const markdown = readFileSync(archivo, {encoding: 'utf8'});
 
 
 //El modulo markdown tiene dos moods (true-trae todos los detalles//false-solo los links)
@@ -59,7 +59,7 @@ function status(link){
             
           resolve(response.statusCode)
         } else{
-           // console.log(error)
+           
           resolve(400)
         }
     })})};
