@@ -1,6 +1,6 @@
 {
   "name": "mdlinks-versioncli-sigrun",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "dependencies": {
     "comander": "0.0.1-security",
     "commander": "^8.0.0",
