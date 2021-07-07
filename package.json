@@ -1,5 +1,5 @@
 {
-  "name": "md-links",
+  "name": "mdlinks-versioncli-sigrun",
   "version": "0.1.0",
   "dependencies": {
     "comander": "0.0.1-security",
@@ -8,7 +8,7 @@
     "request": "^2.88.2",
     "yargs": "^17.0.1"
   },
-  "description": "* [1. Preámbulo](#1-preámbulo)\r * [2. Resumen del proyecto](#2-resumen-del-proyecto)",
+  "description": "Este modulo cli,se encarga de verificar el status code http de links que se encuentren dentro de un archivo markdown,tambien realiza recursion sobre carpetas para buscar archivos markdown y extraer los links",
   "main": "index.js",
   "directories": {
     "test": "test"
