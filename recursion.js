@@ -8,9 +8,7 @@ function main(base){
   return new Promise((resolve,reject)=>{
     absolute(base);
     setTimeout(function(){ resolve(arrayMD) }, 2500);
-  })
-  
-  
+  }) 
 }
 
 function absolute(path){

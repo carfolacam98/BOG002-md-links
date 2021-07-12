@@ -21,7 +21,7 @@ details.forEach(detail => arrayDetail.push(detail))
         objetoCorregido.href=arrayDetail[i].href;
         objetoCorregido.text=arrayDetail[i].text;
         objetoCorregido.rute=archivo;
-         arrayTrue.push(await prueba(objetoCorregido.href,objetoCorregido))
+         arrayTrue.push(await statusResult(objetoCorregido.href,objetoCorregido))
     }   
     }
     
@@ -39,7 +39,7 @@ if(bool===true){
 }
 
 
- async function prueba(param1,param2){
+ async function statusResult(param1,param2){
   var statusCode= await status(param1)
  
   if (statusCode==200){
